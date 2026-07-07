@@ -39,6 +39,7 @@ export class Tab2Page {
   ambilFoto(event: any) {
 
     this.foto = event.target.files[0];
+    alert(this.foto.name);
 
   }
 
