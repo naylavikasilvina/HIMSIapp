@@ -1,0 +1,201 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="primary">
+
+    <ion-title>
+      Status Pendaftaran
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true" class="status-page ion-padding">
+
+  <div class="status-header">
+
+    <img
+      src="assets/icon/logo.png"
+      alt="Logo HIMSI">
+
+    <h2>
+      Cek Status Pendaftaran
+    </h2>
+
+    <p>
+      Masukkan NIM untuk melihat status
+      pendaftaran anggota HIMSI.
+    </p>
+
+  </div>
+
+  <ion-card class="search-card">
+
+    <ion-card-content>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Nomor Induk Mahasiswa (NIM)
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="nim"
+          placeholder="Contoh : 231011401234">
+        </ion-input>
+
+      </ion-item>
+
+
+      <ion-button
+        expand="block"
+        class="cek-btn"
+        (click)="cekStatus()">
+
+        <ion-icon
+          name="search-outline"
+          slot="start">
+        </ion-icon>
+
+        Cek Status
+
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card
+    class="result-card"
+    *ngIf="data">
+
+    <ion-card-content>
+
+      <div class="foto-container">
+        <img [src]="postPvdr.upload + data.foto">
+      </div>
+
+      <h2 class="nama">
+        {{ data.nama_lengkap }}
+      </h2>
+
+      <div class="data-item">
+        <ion-icon name="card-outline"></ion-icon>
+        <p>
+          <b>NIM :</b> {{ data.nim }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="school-outline"></ion-icon>
+        <p>
+          <b>Semester :</b> {{ data.semester }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="home-outline"></ion-icon>
+        <p>
+          <b>Alamat :</b> {{ data.alamat }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="location-outline"></ion-icon>
+        <p>
+          <b>Tempat Lahir :</b> {{ data.tempat_lahir }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <p>
+          <b>Tanggal Lahir :</b> {{ data.tanggal_lahir }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="moon-outline"></ion-icon>
+        <p>
+          <b>Agama :</b> {{ data.agama }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="heart-outline"></ion-icon>
+        <p>
+          <b>Hobi :</b> {{ data.hoby }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="construct-outline"></ion-icon>
+        <p>
+          <b>Keahlian :</b> {{ data.keahlian }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="school"></ion-icon>
+        <p>
+          <b>IPK :</b> {{ data.ipk }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="call-outline"></ion-icon>
+        <p>
+          <b>No. HP :</b> {{ data.no_hp }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="mail-outline"></ion-icon>
+        <p>
+          <b>Email :</b> {{ data.email }}
+        </p>
+      </div>
+
+      <div class="data-item">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        <p>
+          <b>Alasan Bergabung :</b> {{ data.alasan_bergabung }}
+        </p>
+      </div>
+
+
+      <div class="data-item">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <p>
+          <b>Status :</b> {{ data.status }}
+        </p>
+      </div>
+
+      <div class="badge-container">
+        <ion-badge
+          color="warning"
+          *ngIf="data.status == 'Pending'">
+          Pending
+        </ion-badge>
+
+        <ion-badge
+          color="success"
+          *ngIf="data.status == 'Diterima'">
+          Diterima
+        </ion-badge>
+
+        <ion-badge
+          color="danger"
+          *ngIf="data.status == 'Ditolak'">
+          Ditolak
+        </ion-badge>
+
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

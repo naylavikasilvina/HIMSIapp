@@ -1,0 +1,248 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="primary">
+
+    <ion-title>
+      About Developer
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="profile-section">
+
+    <img
+      src="assets/icon/profile.jpeg"
+      class="profile-img">
+
+    <h1>Nayla Vika Silvina</h1>
+
+    <p class="subtitle">
+      Mobile Developer • Sistem Informasi
+    </p>
+
+  </div>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Profil Pengembang
+      </ion-card-title>
+    </ion-card-header>
+
+  <ion-card-content>
+
+  <div class="biodata-row">
+    <span class="label">Nama</span>
+    <span class="value">: Nayla Vika Silvina</span>
+  </div>
+
+  <div class="biodata-row">
+    <span class="label">NIM</span>
+    <span class="value">: 23100003</span>
+  </div>
+
+  <div class="biodata-row">
+    <span class="label">Program Studi</span>
+    <span class="value">: Sistem Informasi</span>
+  </div>
+
+  <div class="biodata-row">
+    <span class="label">Semester</span>
+    <span class="value">: 6</span>
+  </div>
+
+  <div class="biodata-row">
+    <span class="label">Bidang Minat</span>
+    <span class="value">: Mobile Development, UI/UX Design, Sistem Informasi</span>
+  </div>
+
+</ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Tentang Saya
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      Saya merupakan mahasiswa Program Studi Sistem Informasi yang 
+      memiliki minat dalam bidang pengembangan aplikasi mobile, analisis sistem, 
+      serta perancangan antarmuka pengguna (UI/UX). 
+      Saya senang mempelajari teknologi baru dan mengembangkan solusi digital 
+      yang dapat membantu organisasi maupun institusi pendidikan.
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Informasi Proyek
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="project-info">
+
+      <p>
+        Aplikasi <b>HIMSIapp</b> dibuat sebagai proyek pembelajaran untuk memenuhi tugas
+       <p> <b>Mata Kuliah :</b><br>
+        Pemrograman Mobile       
+      </p>
+
+      <p>
+        <b>Dosen Pengampu :</b><br>
+        Dr. Roberto Kaban, M.Kom.
+      </p>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Skills & Technologies
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-chip color="primary">
+        <ion-label>Ionic Framework</ion-label>
+      </ion-chip>
+
+      <ion-chip color="success">
+        <ion-label>Angular</ion-label>
+      </ion-chip>
+
+      <ion-chip color="warning">
+        <ion-label>PHP</ion-label>
+      </ion-chip>
+
+      <ion-chip color="danger">
+        <ion-label>MySQL</ion-label>
+      </ion-chip>
+
+      <ion-chip color="tertiary">
+        <ion-label>UI/UX Design</ion-label>
+      </ion-chip>
+
+      <ion-chip color="medium">
+        <ion-label>Mobile Development</ion-label>
+      </ion-chip>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+  <ion-card-header>
+    <ion-card-title>
+      Dokumentasi Project
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <div class="slider-box">
+
+      <img
+        [src]="fotoList[fotoAktif].gambar"
+        class="galeri">
+
+      <p class="caption">
+        {{ fotoList[fotoAktif].caption }}
+      </p>
+
+      <div class="slider-btn">
+
+        <ion-button
+          fill="outline"
+          (click)="prevFoto()">
+          ◀
+        </ion-button>
+
+        <ion-button
+          fill="outline"
+          (click)="nextFoto()">
+          ▶
+        </ion-button>
+
+      </div>
+
+    </div>
+
+  </ion-card-content>
+
+</ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Tujuan Aplikasi HIMSIapp
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ul>
+        <li>Mempermudah proses pendaftaran anggota HIMSI.</li>
+        <li>Mengelola data pendaftar secara digital.</li>
+        <li>Membantu admin melakukan seleksi anggota baru.</li>
+        <li>Memberikan informasi status pendaftaran secara cepat dan transparan.</li>
+      </ul>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Contact Person
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>📧 Email : naylavikasilvina@gmail.com</p>
+
+      <p>📱 WhatsApp : 083180883787</p>
+
+      <p>📷 Instagram : naylavika_</p>
+
+      <p>💻 GitHub : github.com/naylavikasilvina</p>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <div class="footer">
+
+    <p>
+      HIMSIapp © 2026
+    </p>
+
+    <p>
+      Developed by Nayla Vika Silvina
+    </p>
+
+  </div>
+
+</ion-content>

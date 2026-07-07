@@ -1,0 +1,165 @@
+<ion-header [translucent]="true">
+<ion-toolbar color="primary">
+
+  <ion-title>
+    Dashboard Admin HIMSI
+  </ion-title>
+
+  <ion-buttons slot="end">
+
+    <ion-button (click)="logout()">
+
+      <ion-icon
+        slot="icon-only"
+        name="log-out-outline">
+      </ion-icon>
+
+    </ion-button>
+
+  </ion-buttons>
+
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="stat-grid">
+
+<ion-card
+  class="stat-card total"
+  (click)="filterData('Pending')">
+
+  <ion-card-content>
+
+    <h1>{{ total }}</h1>
+
+    <p>Total Pendaftar</p>
+
+  </ion-card-content>
+
+</ion-card>
+
+    <ion-card
+      class="stat-card diterima"
+      (click)="filterData('Diterima')">
+
+      <ion-card-content>
+
+        <h1>{{ diterima }}</h1>
+
+        <p>Diterima</p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card
+      class="stat-card ditolak"
+      (click)="filterData('Ditolak')">
+
+      <ion-card-content>
+
+        <h1>{{ ditolak }}</h1>
+
+        <p>Ditolak</p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+<ion-button
+  expand="block"
+  fill="outline"
+  color="primary"
+  class="ion-margin-bottom"
+  (click)="filterData('Semua')">
+
+  Tampilkan Semua Data
+
+</ion-button>
+
+  <h2 class="title">
+    Data Pendaftar HIMSI
+  </h2>
+
+  <ion-card
+    *ngFor="let item of pendaftar"
+    class="data-card">
+
+    <ion-card-content>
+
+      <div class="foto-box"><img [src]="postPvdr.upload + item.foto" class="foto"></div>
+
+      <div class="data">
+
+        <h2>{{ item.nama_lengkap }}</h2>
+
+        <p><b>NIM :</b> {{ item.nim }}</p>
+        <p><b>Semester :</b> {{ item.semester }}</p>
+        <p><b>Alamat :</b> {{ item.alamat }}</p>
+        <p><b>Tempat Lahir :</b> {{ item.tempat_lahir }}</p>
+        <p><b>Tanggal Lahir :</b> {{ item.tanggal_lahir }}</p>
+        <p><b>Agama :</b> {{ item.agama }}</p>
+        <p><b>Hobi :</b> {{ item.hoby }}</p>
+        <p><b>Keahlian :</b> {{ item.keahlian }}</p>
+        <p><b>IPK :</b> {{ item.ipk }}</p>
+        <p><b>No. HP :</b> {{ item.no_hp }}</p>
+        <p><b>Email :</b> {{ item.email }}</p>
+        <p><b>Alasan Bergabung :</b> {{ item.alasan_bergabung }}</p>
+
+        <div class="status-box">
+
+          <ion-badge
+            color="warning"
+            *ngIf="item.status == 'Pending'">
+            Pending
+          </ion-badge>
+
+          <ion-badge
+            color="success"
+            *ngIf="item.status == 'Diterima'">
+            Diterima
+          </ion-badge>
+
+          <ion-badge
+            color="danger"
+            *ngIf="item.status == 'Ditolak'">
+            Ditolak
+          </ion-badge>
+
+        </div>
+
+        <div
+          class="btn-group"
+          *ngIf="item.status == 'Pending'">
+
+          <ion-button
+            color="success"
+            size="small"
+            (click)="terima(item.id)">
+
+            Terima
+
+          </ion-button>
+
+          <ion-button
+            color="danger"
+            size="small"
+            (click)="tolak(item.id)">
+
+            Tolak
+
+          </ion-button>
+
+        </div>
+
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,270 @@
+ion-content{
+  --background: #f4f7ff;
+}
+
+.profile-section{
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.profile-img{
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 6px solid #3880ff;
+
+  box-shadow:
+    0 10px 25px rgba(56,128,255,0.25);
+
+  transition: all .4s ease;
+}
+
+.profile-img:hover{
+  transform: scale(1.05);
+}
+
+.profile-section h1{
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #1d3557;
+}
+
+.profile-section h2{
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #1d3557;
+}
+
+.subtitle{
+  font-size: 17px;
+  color: #6b7280;
+}
+
+ion-card{
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.08);
+
+  transition: all .35s ease;
+
+  overflow: hidden;
+
+  border: none;
+}
+
+ion-card:hover{
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 18px 35px rgba(0,0,0,0.12);
+
+}
+
+ion-card::before{
+
+  content: '';
+
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  background: linear-gradient(
+    to right,
+    #3880ff,
+    #4facfe
+  );
+}
+
+ion-card-title{
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #1d3557;
+}
+
+ion-card-content{
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #555;
+}
+
+ion-chip{
+
+  margin: 5px;
+
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+ion-chip:hover{
+
+  transform: scale(1.05);
+
+}
+
+.galeri-grid{
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+.galeri{
+  width: 85%;
+  height: 250px;
+
+  object-fit: cover;
+
+  display: block;
+  margin: auto;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+  transition: 0.3s ease;
+}
+
+.galeri:hover{
+  transform: scale(1.02);
+}
+
+.caption{
+
+  margin-top: 10px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  color: #666;
+
+  font-style: italic;
+}
+
+.footer{
+
+  text-align: center;
+
+  margin-top: 25px;
+  margin-bottom: 20px;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+ion-card{
+
+  animation: fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+
+  from{
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  to{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+.slider-box{
+
+  text-align: center;
+}
+
+.slider-btn{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.slider-btn ion-button{
+
+  --border-radius: 15px;
+
+  width: 60px;
+}
+.biodata-row{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.label{
+  width: 130px;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.value{
+  flex: 1;
+}
+.project-info p{
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.project-info b{
+  font-size: 15px;
+  color: #1d3557;
+}
+.biodata-row{
+  display: flex;
+  margin-bottom: 8px;
+  align-items: flex-start;
+}
+
+.label{
+  width: 130px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.value{
+  flex: 1;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}

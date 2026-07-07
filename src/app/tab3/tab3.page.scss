@@ -1,0 +1,177 @@
+.status-page {
+  --background: #f4f7ff;
+}
+
+.status-header {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  margin-top: 20px;
+
+  margin-bottom: 30px;
+}
+
+.status-header img {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  background: white;
+
+  padding: 6px;
+
+  border: 3px solid #0d6efd;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.status-header h2 {
+  margin-top: 14px;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #0d6efd;
+}
+
+.status-header p {
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  color: #666;
+
+  line-height: 1.6;
+
+  max-width: 270px;
+}
+
+ion-card {
+  border-radius: 28px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  background: white;
+
+  overflow: hidden;
+
+  margin-top: 18px;
+
+  transition: 0.3s;
+}
+
+ion-card:hover {
+  transform: translateY(-3px);
+}
+
+.status-box {
+  margin-top: 25px;
+
+  padding: 18px;
+
+  background: #f7f9ff;
+
+  border-radius: 20px;
+
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+}
+
+ion-item {
+  --background: #f7f9ff;
+
+  --border-radius: 16px;
+
+  border-radius: 16px;
+
+  margin-bottom: 18px;
+
+  --padding-start: 14px;
+
+  --inner-padding-end: 14px;
+}
+
+ion-button {
+  height: 52px;
+
+  font-weight: 700;
+
+  font-size: 15px;
+
+  --border-radius: 16px;
+
+  --background: #0d6efd;
+
+  margin-top: 10px;
+
+  letter-spacing: 0.5px;
+}
+
+ion-badge {
+  padding: 10px 22px;
+
+  font-size: 15px;
+
+  border-radius: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #111;
+
+  margin-top: 15px;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+
+  color: #444;
+
+  margin-bottom: 10px;
+
+  line-height: 1.5;
+}
+
+.result-photo {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid #0d6efd;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+
+  .status-header h2 {
+    font-size: 22px;
+  }
+
+  .status-header p {
+    font-size: 13px;
+  }
+
+}

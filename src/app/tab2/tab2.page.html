@@ -1,0 +1,276 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="primary">
+
+    <ion-title>
+      Pendaftaran Anggota
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding form-page">
+
+  <div class="logo-container">
+
+    <img
+      src="assets/icon/logo.png"
+      alt="Logo HIMSI">
+
+    <h2>
+      Pendaftaran Anggota HIMSI
+    </h2>
+
+    <p>
+      Formulir pendaftaran anggota
+      Himpunan Mahasiswa Sistem Informasi
+    </p>
+
+  </div>
+
+  <ion-card>
+
+    <ion-card-content>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Nama Lengkap
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="nama_lengkap"
+          placeholder="Masukkan nama lengkap">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          NIM
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="nim"
+          placeholder="Masukkan NIM">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Semester
+        </ion-label>
+
+        <ion-select
+          [(ngModel)]="semester"
+          placeholder="Pilih semester">
+
+          <ion-select-option value="Semester 1">
+            Semester 1
+          </ion-select-option>
+
+          <ion-select-option value="Semester 2">
+            Semester 2
+          </ion-select-option>
+
+          <ion-select-option value="Semester 3">
+            Semester 3
+          </ion-select-option>
+
+          <ion-select-option value="Semester 4">
+            Semester 4
+          </ion-select-option>
+
+          <ion-select-option value="Semester 5">
+            Semester 5
+          </ion-select-option>
+
+          <ion-select-option value="Semester 6">
+            Semester 6
+          </ion-select-option>
+
+          <ion-select-option value="Semester 7">
+            Semester 7
+          </ion-select-option>
+
+          <ion-select-option value="Semester 8">
+            Semester 8
+          </ion-select-option>
+
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Alamat
+        </ion-label>
+
+        <ion-textarea
+          [(ngModel)]="alamat"
+          placeholder="Masukkan alamat lengkap">
+        </ion-textarea>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Tempat Lahir
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="tempat_lahir"
+          placeholder="Masukkan tempat lahir">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Tanggal Lahir
+        </ion-label>
+
+        <ion-input
+          type="date"
+          [(ngModel)]="tanggal_lahir">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Agama
+        </ion-label>
+
+        <ion-select
+          [(ngModel)]="agama"
+          placeholder="Masukkan agama">
+         <ion-select-option value="Islam">Islam</ion-select-option>
+         <ion-select-option value="Kristenn Protestan">Kristenn Protestan</ion-select-option>
+         <ion-select-option value="Katolik">Katolik</ion-select-option>
+         <ion-select-option value="Hindu">Hindu</ion-select-option>
+         <ion-select-option value="Islam">Buddha</ion-select-option>
+         <ion-select-option value="Konghucu">Konghucu</ion-select-option>
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Hoby
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="hoby"
+          placeholder="Masukkan hoby">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Keahlian
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="keahlian"
+          placeholder="Masukkan keahlian">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          IPK
+        </ion-label>
+
+        <ion-input
+          type="number"
+          [(ngModel)]="ipk"
+          placeholder="Contoh : 3.75">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          No HP
+        </ion-label>
+
+        <ion-input
+          [(ngModel)]="no_hp"
+          placeholder="Masukkan nomor HP">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Email
+        </ion-label>
+
+        <ion-input
+          type="email"
+          [(ngModel)]="email"
+          placeholder="Masukkan email">
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item class="textarea-item">
+
+        <ion-label position="stacked">
+          Alasan Bergabung ke HIMSI
+        </ion-label>
+
+        <ion-textarea
+          rows="7"
+          autoGrow="true"
+          [(ngModel)]="alasan_bergabung"
+          placeholder="Tuliskan alasan anda ingin bergabung dengan HIMSI...">
+        </ion-textarea>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label position="stacked">
+          Upload Foto
+        </ion-label>
+
+        <input
+          type="file"
+          (change)="ambilFoto($event)">
+
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        color="primary"
+        class="ion-margin-top"
+        (click)="daftar()">
+
+        <ion-icon
+          name="paper-plane-outline"
+          slot="start">
+        </ion-icon>
+        Kirim Pendaftaran
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

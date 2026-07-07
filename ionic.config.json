@@ -1,0 +1,7 @@
+{
+  "name": "HIMSIapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
